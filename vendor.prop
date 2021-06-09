@@ -35,6 +35,7 @@ vendor.audio_hal.period_multiplier=3
 bluetooth.device.default_name=Xiaomi Pad 6
 
 # Display
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.vendor.display.paneltype=2
 vendor.display.defer_fps_frame_count=2
 
