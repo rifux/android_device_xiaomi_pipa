@@ -41,3 +41,6 @@ persist.log.tag."LOGTAG"=S
 
 # netflix bsp_rev
 ro.netflix.bsp_rev=Q8250-19134-1
+
+# USB
+vendor.usb.product_string=Xiaomi Pad 6
