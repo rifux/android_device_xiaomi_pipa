@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lmodroid_pipa.mk
+    $(LOCAL_DIR)/lineage_pipa.mk
 
 COMMON_LUNCH_CHOICES := \
-    lmodroid_pipa-user \
-    lmodroid_pipa-userdebug \
-    lmodroid_pipa-eng
+    lineage_pipa-user \
+    lineage_pipa-userdebug \
+    lineage_pipa-eng
