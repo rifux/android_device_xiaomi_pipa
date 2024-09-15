@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Windows extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+
 # A/B
 TARGET_IS_VAB := true
 
@@ -63,6 +67,11 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 
 # WiFi
 PRODUCT_PACKAGES += \
