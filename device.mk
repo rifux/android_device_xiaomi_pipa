@@ -28,6 +28,13 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1800
 
+# Kernel
+TARGET_KERNEL_DIR ?= device/xiaomi/pipa-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
