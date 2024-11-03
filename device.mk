@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-voltage
 
 # Peripheral Manager
 PRODUCT_PACKAGES += \
@@ -57,6 +57,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.device.rc
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -67,6 +71,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # WiFi
 PRODUCT_PACKAGES += \
     TargetWifiOverlay
+
+# Windows extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/pipa/pipa-vendor.mk)
